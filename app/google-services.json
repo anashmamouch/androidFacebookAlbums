@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1045770481773",
+    "firebase_url": "https://facebookphotos-2abe0.firebaseio.com",
+    "project_id": "facebookphotos-2abe0",
+    "storage_bucket": "facebookphotos-2abe0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045770481773:android:f1dcca9c2ceac7e1",
+        "android_client_info": {
+          "package_name": "com.benzino.facebookphotos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045770481773-0238usepsioh270pdn58eq83ivqs7824.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-VN1qHIoye9YX2u7aDGPMuceoPKk44hs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
