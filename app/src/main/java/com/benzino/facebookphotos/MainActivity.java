@@ -45,6 +45,9 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -103,18 +106,33 @@ public class MainActivity extends AppCompatActivity {
 
                         Log.e("anas_response", response.toString());
 
+                        HashMap<String, String> hashmap = new HashMap<String, String>();
+                        //Map<String, String> map = new TreeMap<>();
+
                         try {
                             JSONArray data = response.getJSONArray("data");
 
                             for(int i = 0; i< data.length(); i++){
                                 JSONObject object = data.getJSONObject(i);
-                                String name = object.getString("name");
+                                String name = object.getString("name").toLowerCase();
                                 String image = object.getJSONObject("picture").getJSONObject("data").getString("url");
 
-                                names.add(name);
-                                images.add(image);
+                                hashmap.put(name, image);
+
 
                             }
+                            //sorting elements by name
+                            Map<String,String> map = new TreeMap<>(hashmap);
+
+                            for(String key : map.keySet()){
+                                names.add(key);
+                            }
+
+                            for(String value : map.values()){
+                                images.add(value);
+                            }
+
+
 
                             gridView.setAdapter(new MyAdapter(getApplicationContext(), images, names));
                             progressBar.setVisibility(View.GONE);
